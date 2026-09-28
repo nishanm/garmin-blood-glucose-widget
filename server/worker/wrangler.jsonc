@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "bg-glance-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-01",
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  }
+  // Secrets (WATCH_TOKEN, NIGHTSCOUT_URL, NIGHTSCOUT_TOKEN) are set with
+  // `wrangler secret put <NAME>` — never in this file. See ../README.md.
+}

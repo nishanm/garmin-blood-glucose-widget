@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+    <string id="AppName">BG Glance</string>
+
+    <!-- Build variant, shown in the on-watch menu next to the version so a
+         sideload is identifiable on-wrist. Defaults to "generic" (the
+         monkey.jungle / store build); the gitignored resources-personal/
+         overlay overrides it to "personal" for sideload builds, since
+         personal.jungle layers that path on top and later ids win. -->
+    <string id="BuildVariant">generic</string>
+
+    <string id="SettingUrlTitle">Endpoint URL (see docs/CONTRACT.md)</string>
+    <string id="SettingTokenTitle">Endpoint token</string>
+    <string id="SettingGlanceTitleTitle">Glance label (short — shares the row with the reading age)</string>
+    <string id="SettingUseMmolTitle">Show mmol/L instead of mg/dL</string>
+    <string id="SettingUseNsThresholdsTitle">Color bands from server thresholds (off = manual values below)</string>
+    <string id="SettingLowTitle">Low threshold (mg/dL)</string>
+    <string id="SettingHighTitle">High threshold (mg/dL)</string>
+    <string id="SettingUrgentLowTitle">Urgent low threshold (mg/dL)</string>
+    <string id="SettingUrgentHighTitle">Urgent high threshold (mg/dL)</string>
+</strings>

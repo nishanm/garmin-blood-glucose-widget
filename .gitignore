@@ -1,0 +1,22 @@
+bin/
+gen/
+*.prg
+*.prg.debug.xml
+developer_key*
+*.der
+*.pem
+*-settings.json
+external-mir/
+internal-mir/
+__pycache__/
+
+# Personal build overlay: real URLs/tokens for sideloaded builds live here
+# (see personal.jungle + README). Never commit.
+resources-personal/
+
+# Local server config — never commit real secrets.
+config.local.json
+.env
+.dev.vars
+.wrangler/
+node_modules/

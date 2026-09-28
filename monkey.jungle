@@ -1,0 +1,5 @@
+project.manifest = manifest.xml
+
+# Personal sideload project: silence compile-time type checking so strict
+# signature drift between SDK releases can't block a build (level 0 = off).
+project.typecheck = 0

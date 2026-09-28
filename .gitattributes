@@ -1,0 +1,7 @@
+# Pin shell scripts to LF regardless of the checkout platform's line-ending
+# settings. A CRLF shell script fails cryptically on Linux/macOS ("invalid
+# option" at whatever line has the first `\r`-corrupted flag), so this is
+# not cosmetic. Verify with a byte count, never with grep -c:
+#     python -c "import pathlib;b=pathlib.Path('tools/build.sh').read_bytes();print(b.count(13))"
+# must print 0.
+*.sh text eol=lf

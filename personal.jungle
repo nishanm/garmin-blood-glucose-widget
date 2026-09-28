@@ -1,0 +1,9 @@
+# Personal sideload build: same project, plus the gitignored
+# resources-personal/ overlay whose properties/strings override the generic
+# blanks (later resourcePath entries win on duplicate ids). Sideloaded apps
+# can't be configured from the Garmin Connect app, so real values must be
+# baked in at build time:
+#   monkeyc -d venu441mm -f personal.jungle -o BGGlance.prg -y <key>
+project.manifest = manifest.xml
+project.typecheck = 0
+base.resourcePath = resources;resources-personal

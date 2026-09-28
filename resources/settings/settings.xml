@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+    <setting propertyKey="@Properties.serverUrl" title="@Strings.SettingUrlTitle">
+        <settingConfig type="alphaNumeric"/>
+    </setting>
+    <setting propertyKey="@Properties.watchToken" title="@Strings.SettingTokenTitle">
+        <settingConfig type="alphaNumeric"/>
+    </setting>
+    <setting propertyKey="@Properties.glanceTitle" title="@Strings.SettingGlanceTitleTitle">
+        <settingConfig type="alphaNumeric" maxLength="10"/>
+    </setting>
+    <setting propertyKey="@Properties.useMmol" title="@Strings.SettingUseMmolTitle">
+        <settingConfig type="boolean"/>
+    </setting>
+    <setting propertyKey="@Properties.useNsThresholds" title="@Strings.SettingUseNsThresholdsTitle">
+        <settingConfig type="boolean"/>
+    </setting>
+    <setting propertyKey="@Properties.lowThreshold" title="@Strings.SettingLowTitle">
+        <settingConfig type="numeric" min="40" max="120"/>
+    </setting>
+    <setting propertyKey="@Properties.highThreshold" title="@Strings.SettingHighTitle">
+        <settingConfig type="numeric" min="120" max="400"/>
+    </setting>
+    <setting propertyKey="@Properties.urgentLow" title="@Strings.SettingUrgentLowTitle">
+        <settingConfig type="numeric" min="40" max="80"/>
+    </setting>
+    <setting propertyKey="@Properties.urgentHigh" title="@Strings.SettingUrgentHighTitle">
+        <settingConfig type="numeric" min="180" max="500"/>
+    </setting>
+</settings>

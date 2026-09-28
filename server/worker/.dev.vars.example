@@ -1,0 +1,5 @@
+# Copy to .dev.vars for local `wrangler dev` (gitignored — never commit the real file).
+# For a deployed Worker, set these with `wrangler secret put <NAME>` instead.
+WATCH_TOKEN=generate-with-python-secrets-token-urlsafe-32
+NIGHTSCOUT_URL=https://your-nightscout-site.example.com
+NIGHTSCOUT_TOKEN=your-nightscout-readable-token

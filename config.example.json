@@ -1,0 +1,14 @@
+{
+  "device": "venu441mm",
+  "developerKey": "C:/path/to/developer_key",
+  "serverUrl": "https://your-worker.example.workers.dev/api/watch/glucose",
+  "watchToken": "REPLACE_ME (generate: python -c \"import secrets; print(secrets.token_urlsafe(32))\")",
+  "glanceTitle": "BG",
+  "useMmol": false,
+  "useNsThresholds": true,
+  "lowThreshold": 90,
+  "highThreshold": 180,
+  "urgentLow": 80,
+  "urgentHigh": 230,
+  "diagnostics": false
+}

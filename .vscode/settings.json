@@ -1,0 +1,15 @@
+{
+  // Build the SIDELOAD variant by default.
+  //
+  // The extension's own default is monkey.jungle — the GENERIC build, whose
+  // serverUrl/watchToken ship empty so nothing personal lands in a public
+  // build. Sideloading that produces a watch stuck on "Set server URL": it
+  // compiles and installs perfectly happily, then never fetches. personal.jungle
+  // is the same project plus the gitignored resources-personal/ overlay that
+  // bakes the real endpoint and token in.
+  //
+  // Building the generic variant is then a deliberate CLI act, which is the
+  // right way round — the dangerous build should be the one you have to ask for:
+  //   monkeyc -d venu441mm -f monkey.jungle -o BGGlance.prg -y <key>
+  "monkeyC.jungleFiles": "personal.jungle"
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<properties>
+    <!-- Glucose endpoint URL + bearer token. Ship empty so nothing personal is
+         baked into a store/public build; sideloaded builds (which can't be
+         configured from the Garmin Connect app) override these via
+         resources-personal/ + personal.jungle — see README. The endpoint is
+         expected to implement docs/CONTRACT.md and handle its own upstream
+         failover, so the watch needs no second source. -->
+    <property id="serverUrl" type="string"></property>
+    <property id="watchToken" type="string"></property>
+    <!-- Color bands (mg/dL): green lowThreshold..highThreshold, yellow
+         urgentLow..lowThreshold-1 and highThreshold+1..urgentHigh, red
+         below urgentLow / above urgentHigh. When useNsThresholds is true
+         (default) the bands come from the server's configured thresholds
+         instead; the manual values below are the fallback/override. -->
+    <!-- Label drawn in the glance row. A property (not a string resource)
+         because glance code can't load resources — see BGData.glanceTitle. -->
+    <property id="glanceTitle" type="string">BG</property>
+    <property id="useMmol" type="boolean">false</property>
+    <property id="useNsThresholds" type="boolean">true</property>
+    <!-- Diagnostics: when true, the background request carries a d= parameter
+         describing recent fetch outcomes, so the server log records what the
+         watch saw and not just what the server answered. Default false — it
+         appends to the every-5-min safety-critical request path. Turn on for an
+         investigation window, off afterwards. Carries no glucose value and no
+         token; see BGData.diagToken. -->
+    <property id="diagnostics" type="boolean">false</property>
+    <property id="lowThreshold" type="number">90</property>
+    <property id="highThreshold" type="number">180</property>
+    <property id="urgentLow" type="number">80</property>
+    <property id="urgentHigh" type="number">230</property>
+</properties>
